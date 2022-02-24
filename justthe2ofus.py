@@ -20,7 +20,6 @@ Run app.py
 
     python3 app.py OR python3 -m flask run
     NOTE: If receiving "port already in use" error, try other ports: 5000, 8090, 8888, etc...
-        (will need to be updated in your Spotify app and SPOTIPY_REDIRECT_URI variable)
 """
 
 import os
@@ -74,7 +73,7 @@ def index():
                                                show_dialog=True,
                                                client_id='90259c6fcaa847d8b3a2e8608dd14e5c',
                                                redirect_uri='http://139.179.184.73:8080',
-                                               client_secret='a354471cfe744280a64040c867251170')
+                                               client_secret='')
 
     if request.args.get("code"):
         # Step 3. Being redirected from Spotify auth page
@@ -137,7 +136,7 @@ def user_selected(filename):
     auth_manager = spotipy.oauth2.SpotifyOAuth(cache_handler=cache_handler,
                                                client_id='90259c6fcaa847d8b3a2e8608dd14e5c',
                                                redirect_uri='http://139.179.184.73:8080',
-                                               client_secret='a354471cfe744280a64040c867251170')
+                                               client_secret='')
     spotify = spotipy.Spotify(auth_manager=auth_manager)
 
     if not auth_manager.validate_token(cache_handler.get_cached_token()):
@@ -188,7 +187,7 @@ def get_userliked():
     auth_manager = spotipy.oauth2.SpotifyOAuth(cache_handler=cache_handler,
                                                client_id='90259c6fcaa847d8b3a2e8608dd14e5c',
                                                redirect_uri='http://139.179.184.73:8080',
-                                               client_secret='a354471cfe744280a64040c867251170')
+                                               client_secret='')
     spotify = spotipy.Spotify(auth_manager=auth_manager)
 
     if not auth_manager.validate_token(cache_handler.get_cached_token()):
@@ -229,7 +228,7 @@ def save_as_playlist(selectedusername):
     auth_manager = spotipy.oauth2.SpotifyOAuth(cache_handler=cache_handler,
                                                client_id='90259c6fcaa847d8b3a2e8608dd14e5c',
                                                redirect_uri='http://139.179.184.73:8080',
-                                               client_secret='a354471cfe744280a64040c867251170')
+                                               client_secret='')
     spotify = spotipy.Spotify(auth_manager=auth_manager)
 
     if not auth_manager.validate_token(cache_handler.get_cached_token()):
