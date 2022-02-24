@@ -7,15 +7,21 @@ Selecting Create Account gets links of songs that saved to library(liked) in 20 
 
 
 1.Home Page:
+
+
 ![image](https://user-images.githubusercontent.com/33425209/155606823-f2572226-920d-47d8-8e23-b9e0b8791707.png)
 
 2.Select User 
 Lists files with .csv extension
+
+
 ![image](https://user-images.githubusercontent.com/33425209/155607144-a7470633-3df2-439d-899a-dab7e2d8a5bb.png)
 
 
 3.User Selected 
 Checks if the song in the username.csv file is saved in the song library 50 song chunks(api limitation) and creates commonsongs.csv
+
+
 ![image](https://user-images.githubusercontent.com/33425209/155607656-9f313b40-1cca-4a53-9cbf-c2471d98c8ba.png)
 
 
